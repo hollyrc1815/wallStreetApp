@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* .companyData{
+    margin: auto;
+    width: 20%;
+    padding: 30px;
+  } */
+
+  .companyInfoLabel{
+      font-weight: bold;
+      align-self: flex-start;
+      padding-right: 5px;
+  }
+
+  .companyInfo{
+      align-self: flex-end;
+  }
+
+  button {
+    padding: 5px;
+  }
+
+  .tableButtons{
+    margin: auto;
+    width: 20%;
+    padding: 30px;
+  }
+
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  

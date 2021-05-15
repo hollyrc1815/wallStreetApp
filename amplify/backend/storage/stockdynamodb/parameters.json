@@ -1,0 +1,5 @@
+{
+    "tableName": "stockdynamodb",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}

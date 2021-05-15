@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wallstreetapp-dev-214821-authRole",
+      "UnauthRoleArn": "arn:aws:iam::326417667022:role/amplify-wallstreetapp-dev-214821-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::326417667022:role/amplify-wallstreetapp-dev-214821-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wallstreetapp-dev-214821-deployment",
+      "UnauthRoleName": "amplify-wallstreetapp-dev-214821-unauthRole",
+      "StackName": "amplify-wallstreetapp-dev-214821",
+      "StackId": "arn:aws:cloudformation:us-east-1:326417667022:stack/amplify-wallstreetapp-dev-214821/b0a61820-aede-11eb-96f6-0ed5acf75591",
+      "AmplifyAppId": "d26rlsbj8ynasa"
+    }
+  }
+}

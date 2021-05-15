@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/market/company/info/{id}",
+      "lambdaFunction": "stockLambda",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/market/company/info/*"
+    }
+  ],
+  "resourceName": "stockapi",
+  "apiName": "stockapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "stockLambda"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-wallstreetapp-dev-214821-authRole",
+    "unAuthRoleName": "amplify-wallstreetapp-dev-214821-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "stockLambda",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

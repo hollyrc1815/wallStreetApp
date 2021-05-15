@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.stockPicker{
+    margin-right: 100px;
+}
+
+.addAStock{
+    margin-left: 150px;
+}

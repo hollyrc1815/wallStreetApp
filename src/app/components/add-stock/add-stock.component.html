@@ -1,0 +1,37 @@
+<div class="container" style="max-width: 500px;">
+  <h3 class="mb-3 mt-5 text-center">Add Stonk</h3>
+
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.id" class="form-control" placeholder="Symbol">
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.name" class="form-control" placeholder="Name">
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.ceo" class="form-control" placeholder="CEO">
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.price" class="form-control" placeholder="Current Price">
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.stockexchange" class="form-control" placeholder="Stock Exchange">
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.turnover" class="form-control" placeholder="Company Turnover">
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="stockObj.website" class="form-control" placeholder="Website">
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" (click)="addStock(stockObj)">Add Stonk</button>
+  </div>
+
+</div>

@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="stockPicker">
+      <div class="addAStock">
+        <button mat-button mat-raised-button color="primary" routerLink="/add">Add A Stonk</button>
+      </div>
+      <mat-form-field appearance="fill" >
+        <mat-label>Pick a Stonk</mat-label>
+        <mat-select disableRipple [(ngModel)]="selectedValue" name="stock">
+          <!-- <mat-option [value]="option.value" *ngFor="let stocks of Stocks.Items">{{ option.viewValue }}</mat-option> -->
+          <mat-option *ngFor="let stock of Stocks.Items" [value]="stock">{{stock.name}}, {{stock.price}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p> Selected Stonk: {{selectedValue.name}} </p>
+      <div class="container mt-5" >
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Symbol</th>
+              <th scope="col">Ceo</th>
+              <th scope="col">Current Price</th>
+              <th scope="col">Stock Exchange</th>
+              <th scope="col">Turnover</th>
+              <th scope="col">Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{selectedValue.name}}</td>
+              <td>{{selectedValue.id}}</td>
+              <td>{{selectedValue.ceo}}</td>
+              <td>{{selectedValue.price}}</td>
+              <td>{{selectedValue.stockexchange}}</td>
+              <td>{{selectedValue.turnover}}</td>
+              <td>{{selectedValue.website}}</td>
+              <td>
+                <button mat-button mat-raised-button color="warn" class="edit btn-danger btn-sm btn" (click)="delete(selectedValue.id)">Delete</button> &nbsp;
+                <button mat-button mat-raised-button color="primary" class="edit btn-success btn-sm btn" routerLink="/edit/{{selectedValue.id}}"> Edit </button> 
+                <!-- <button mat-button mat-raised-button color="primary" class="edit btn-success btn-sm btn" (click)="openEditDialog()"> Edit </button>  -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+      </div>
+     
+      <div class="container">
+        <h1 class="heading"><strong>Get Stock Prices </strong></h1>
+        <div class="form-group">
+           <label for="userName">Symbol</label>
+           <input type="text" class="form-control" name="Symbol" [(ngModel)]="symbol">
+     
+           <label for="pageNo">Start Date</label>
+           <input type="date" class="form-control" name="date01" [(ngModel)]="date01">
+     
+           <label for="sortOn">End date</label>
+           <input type="date" class="form-control" name="date02" [(ngModel)]="date02">
+        </div>
+     
+        <div class="form-group">
+            <button type="button" (click)="getStockPrices()">Get Prices</button>
+        </div>
+     
+        <div *ngIf="loading">loading...</div>
+        
+        <div *ngIf="errorMessage" class="alert alert-warning">
+           <strong>Warning!</strong> {{errorMessage}}
+        </div>
+     
+        <div class='table-responsive'>
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Date</th>
+                            <th>Open</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Close</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let StockPrices of StockPrices;">
+                          <tr>
+                            <!-- <td>{{Stocks.id}} </td>
+                            <td>{{Stocks.date}}</td>
+                            <td>{{Stocks.open}}</td>
+                            <td>{{Stocks.close}}</td> -->
+                            <td>DOGE</td>
+                            <td>2017-01-05</td>
+                            <td>120.2</td>
+                            <td>156.1</td>
+                            <td>119.7</td>
+                            <td>120.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <!-- <pre>{{StockPrices | json}}</pre> -->
+    </div>
+
+
+    </div>
+  
+    
+   
+  
+  
+
+  
+  
+
+</div>
+
+  
+  
+  
